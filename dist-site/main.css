@@ -437,6 +437,7 @@ span.sectionMark {
 
 #content .section h4 a.download {
     display: inline-block;
+    margin-top: 1em;
 }
 
 /*
