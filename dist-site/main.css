@@ -431,6 +431,14 @@ span.sectionMark {
     text-decoration: underline;
 }
 
+#content .section h4 {
+    text-align: center;
+}
+
+#content .section h4 a.download {
+    display: inline-block;
+}
+
 /*
     download page
 */
