@@ -693,3 +693,133 @@ html[xmlns] .clearfix {
 * html .clearfix {
 	height: 1%;
 }
+
+/**
+ * Resposive Docs
+ */
+.off-canvas-button {
+    display: none;
+}
+
+@media (max-width : 840px) {
+        
+    /**
+     * hiding navigation
+     */
+    #navBg {
+        display: none;
+    }
+
+    #navBg,
+    #nav {
+        background-image: none;        
+    }
+
+    .homeImageLink {
+        background-image: url("i/logo.png");
+    }
+
+    /**
+     * off canvas nav
+     */
+    #nav {
+        left: -220px;
+        transition: left .6s ease;
+        position: fixed;
+        display: block;
+        height: 100%;
+        background-color: #F2F2F2;
+        overflow: auto;        
+
+                box-shadow: -20px -10px 10px -20px rgba(0, 0, 0, 0.3) inset;
+        -webkit-box-shadow: -20px -10px 10px -20px rgba(0, 0, 0, 0.3) inset;
+
+        -webkit-transition: left 0.4s ease-out;
+           -moz-transition: left 0.4s ease-out;
+             -o-transition: left 0.4s ease-out;
+                transition: left 0.4s ease-out;
+    }
+
+    .off-canvas-button {
+        background: none;
+        border: none;
+        position: absolute;
+        left: 15px;
+        display: block;
+        top: 0;
+        z-index: 10;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        -webkit-transition: left 0.4s ease-out;
+           -moz-transition: left 0.4s ease-out;
+             -o-transition: left 0.4s ease-out;
+                transition: left 0.4s ease-out;
+    }
+
+        .off-canvas-button > span {
+            color: #4D4D4D;
+            width: 30px;
+            position: absolute;
+            left: 0;
+            -webkit-transition: opacity 0.4s ease-out;
+               -moz-transition: opacity 0.4s ease-out;
+                 -o-transition: opacity 0.4s ease-out;
+                    transition: opacity 0.4s ease-out;
+        }
+
+        .off-canvas-button .lines {
+            opacity: 1;
+        }
+
+        .off-canvas-button .line {
+            border-radius: 10px;
+            height: 4px;
+            margin-bottom: 4px;
+            float: left;
+            width: 100%;
+            background-color: #4D4D4D;
+        }
+
+        .off-canvas-button .cross {
+            opacity: 0;
+            font-size: 35px;
+            line-height: 20px;
+        }
+
+
+        /**
+         * close / open states
+         */
+        .off-canvas-button.open {
+            left: 230px;
+        }
+        
+        .off-canvas-button.open .cross {
+            opacity: 1;
+        }
+        
+        .off-canvas-button.open .lines {
+            opacity: 0;
+        }
+
+        #nav.open {
+            left: 0;
+        }
+
+    
+    /**
+     * reset containers margin
+     */
+    #content,
+    #footer {
+        margin-left: 0;
+    }
+
+    /**
+     * fluid containers
+     */
+    #content .section {
+        width: 100% !important;
+    }
+}
